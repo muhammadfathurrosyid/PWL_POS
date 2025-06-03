@@ -5,14 +5,13 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             @foreach ($breadcrumb->list as $key => $value)
-            @if ($key == count($breadcrum->list)-1)
-             <li class="breadcrumb-item active">{{ $value }}</li>
-             @else
-             <li class="breadcrumb-item">{{ $value }}</li> 
-            @endif    
+            @if ($key == count($breadcrumb->list)-1) {{-- Perbaikan: $breadcrum menjadi $breadcrumb --}}
+              <li class="breadcrumb-item active">{{ $value }}</li>
+            @else
+              <li class="breadcrumb-item">{{ $value }}</li>
+            @endif
             @endforeach
           </ol>
         </div>
       </div>
-    </div><!-- /.container-fluid -->
-  </section>
+    </div></section>
